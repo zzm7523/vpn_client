@@ -1,0 +1,958 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{8e661563-d0e7-4933-a3af-8be2f335530a}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{e1cd9095-3bfb-4e10-adec-67242e1745b3}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="common\accessible_resource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="accessible_resource_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="appinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\asn1_int.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="certificate_detail.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="change_password_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="change_pin_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\cipher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\connection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\context.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\credentials.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\distname.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\encrypt_device_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\locator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="manage_certificate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\message_box_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\miscellaneous_service_i_proxy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\miscellaneous_service_i_skeleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="option_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="passphrase_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\passphrase_generator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\pkcs12_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="policy\policy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="policy\policy_engine_i.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="policy\policy_engine_i_proxy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="policy\policy_engine_i_skeleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="policy\policy_engine_servant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="preferences.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\process_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\request_dispatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="select_certificate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="select_pkcs12_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\server_endpoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\server_endpoint_selector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="single_application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\system_info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\tapdriver_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\tapdriver_manager_i_proxy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\tapdriver_manager_i_skeleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="policy\terminal_bind_policy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\ticket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\tls_auth.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\translate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="trust_certificate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="user_pass_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\vpn_config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vpn_config_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\vpn_config_manager_i_proxy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\vpn_config_manager_i_skeleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\vpn_i.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\vpn_i_proxy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\vpn_i_skeleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vpn_input_agent_servant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vpn_item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vpn_log_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vpn_observer_servant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\vpn_statistics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vpn_tunnel_detail.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\x509_certificate_info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\x509_certificate_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\x509_name.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\x509v3_ext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\zip_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_accessible_resource_dialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_accessible_resource_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_appinfo.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_appinfo.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_certificate_detail.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_certificate_detail.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_change_password_dialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_change_password_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_change_pin_dialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_change_pin_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_connection.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_connection.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_distname.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_distname.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_encrypt_device_manager.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_encrypt_device_manager.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_manage_certificate.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_manage_certificate.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_miscellaneous_service_i_proxy.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_miscellaneous_service_i_proxy.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_option_dialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_option_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_passphrase_dialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_passphrase_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_policy_engine_i_proxy.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_policy_engine_i_proxy.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_policy_engine_servant.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_policy_engine_servant.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_preferences.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_preferences.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_process_util.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_process_util.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_proxy.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_proxy.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_select_certificate.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_select_certificate.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_select_pkcs12_dialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_select_pkcs12_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_server_endpoint_selector.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_server_endpoint_selector.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_single_application.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_single_application.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_tapdriver_manager.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_tapdriver_manager.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_tapdriver_manager_i_proxy.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_tapdriver_manager_i_proxy.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_trust_certificate.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_trust_certificate.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_user_pass_dialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_user_pass_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_vpn_config_dialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_vpn_config_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_vpn_config_manager_i_proxy.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_vpn_config_manager_i_proxy.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_vpn_i_proxy.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_vpn_i_proxy.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_vpn_input_agent_servant.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_vpn_input_agent_servant.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_vpn_log_dialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_vpn_log_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_vpn_observer_servant.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_vpn_observer_servant.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_vpn_client.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_vpn_tunnel_detail.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_vpn_tunnel_detail.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="common\file_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\dialog_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="policy\cluster_policy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="policy\password_policy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="policy\resource_policy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="policy\update_policy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\vpn_edge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vpn_context.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\progress_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_progress_dialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_progress_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="common\generic_result.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_waiting_spinner_widget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_waiting_spinner_widget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\waiting_spinner_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common\accessible_resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="accessible_resource_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="appinfo.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="common\asn1_int.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="certificate_detail.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="change_password_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="change_pin_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="common\cipher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="common\connection.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="common\context.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common\credentials.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="widgets\distname.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="common\encrypt_device_manager.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="common\locator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="manage_certificate.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="common\message_box_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common\miscellaneous_service_i.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="common\miscellaneous_service_i_proxy.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="common\miscellaneous_service_i_skeleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="option_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="passphrase_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="common\passphrase_generator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common\pkcs12_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="policy\policy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="policy\policy_engine_i.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="policy\policy_engine_i_proxy.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="policy\policy_engine_i_skeleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="policy\policy_engine_servant.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="preferences.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="common\process_util.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="common\proxy.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="common\request_dispatcher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="select_certificate.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="select_pkcs12_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="common\server_endpoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="common\server_endpoint_selector.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="single_application.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="common\system_info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="common\tapdriver_manager.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="common\tapdriver_manager_i.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="common\tapdriver_manager_i_proxy.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="common\tapdriver_manager_i_skeleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="policy\terminal_bind_policy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ticket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common\tls_auth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common\translate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="trust_certificate.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="user_pass_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="common\vpn_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="vpn_config_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="common\vpn_config_manager_i.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="common\vpn_config_manager_i_proxy.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="common\vpn_config_manager_i_skeleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common\vpn_i.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="common\vpn_i_proxy.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="common\vpn_i_skeleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="vpn_input_agent_servant.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="vpn_item.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="vpn_log_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="vpn_observer_servant.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="common\vpn_statistics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x509_certificate_info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x509_certificate_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x509_name.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x509v3_ext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common\zip_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_accessible_resource_dialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_appinfo.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_certificate_detail.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_change_password_dialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_change_pin_dialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_manage_certificate.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_option_dialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_passphrase_dialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_preferences.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_select_certificate.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_select_pkcs12_dialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_trust_certificate.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_user_pass_dialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_vpn_config_dialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_vpn_log_dialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_vpn_tunnel_detail.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common\file_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common\dialog_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config\version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common\vpn_edge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="policy\cluster_policy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="policy\password_policy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="policy\resource_policy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="policy\update_policy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vpn_context.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common\generic_result.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vpn_client_zh_CN.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="accessible_resource_dialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="appinfo.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="certificate_detail.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="change_password_dialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="change_pin_dialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="manage_certificate.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="option_dialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="passphrase_dialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="preferences.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="select_certificate.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="select_pkcs12_dialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="trust_certificate.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="user_pass_dialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="vpn_config_dialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="vpn_log_dialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="vpn_tunnel_detail.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="vpn_tunnel_detail.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="common\progress_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="common\progress_dialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="widgets\waiting_spinner_widget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\adv_closed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\adv_expand.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\blue_vertical_bar.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\certificate.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\change_pin.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\change_password.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\connect_men.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\crypted.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\delete_vpnconfig.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\disconnetd_men.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\edit_vpnconfig.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\flag_en.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\flag_zh_CN.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\flag_zh_TW.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\info.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\new_vpnconfig.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\options.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qt_zh_CN.qm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\remove_credential.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\shield_yellow.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\small_certificate.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\start_screen.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\system_exit.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\update_available.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\view_vpnlog.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\vpn_client.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <CustomBuild Include="vpn_client.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <None Include="vpn_client_zh_CN.qm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\vpn_logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\warning.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\web_resource.png">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vpn_client.rc" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,47 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/certificate.png</file>
+        <file>images/small_certificate.png</file>
+        <file>images/crypted.png</file>
+        <file>images/shield_yellow.png</file>
+        <file>images/vpn_logo.png</file>
+        <file>images/warning.png</file>
+        <file>images/connect_men.png</file>
+        <file>images/disconnetd_men.png</file>
+        <file>images/import_vpnconfig.png</file>
+        <file>images/export_vpnconfig.png</file>
+        <file>images/new_vpnconfig.png</file>
+        <file>images/edit_vpnconfig.png</file>
+        <file>images/delete_vpnconfig.png</file>
+        <file>images/view_vpnlog.png</file>
+        <file>images/vpn_tunnel_detail.png</file>
+        <file>images/options.png</file>
+        <file>images/adv_expand.png</file>
+        <file>images/adv_closed.png</file>
+        <file>images/info.png</file>
+        <file>images/remove_credential.png</file>
+        <file>images/system_exit.png</file>
+        <file>images/vpn_client.png</file>
+        <file>images/vpn_client_tray.png</file>
+		<file>images/vpn_banner.png</file>
+        <file>images/blue_vertical_bar.png</file>
+
+        <file>images/flag_en.png</file>
+        <file>images/flag_zh_CN.png</file>
+        <file>images/flag_zh_TW.png</file>
+      
+        <file>images/change_pin.png</file>
+        <file>images/change_password.png</file>
+        <file>images/update_available.png</file>
+
+        <file>images/show_resource.png</file>
+        <file>images/web_resource.png</file>
+        <file>images/ftp_resource.png</file>
+        <file>images/telnet_resource.png</file>
+        <file>images/share_resource.png</file>
+        <file>images/other_resource.png</file>
+
+        <file>qt_zh_CN.qm</file>
+        <file>vpn_client_zh_CN.qm</file>		
+    </qresource>
+</RCC>

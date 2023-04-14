@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Preferences</class>
+ <widget class="QMainWindow" name="Preferences">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>586</width>
+    <height>361</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Big SSL VPN</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="vpn_client.qrc">
+    <normaloff>:/images/vpn_client_tray.png</normaloff>:/images/vpn_client_tray.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetMinimumSize</enum>
+    </property>
+    <property name="leftMargin">
+     <number>3</number>
+    </property>
+    <property name="topMargin">
+     <number>3</number>
+    </property>
+    <property name="rightMargin">
+     <number>3</number>
+    </property>
+    <property name="bottomMargin">
+     <number>3</number>
+    </property>
+    <item>
+     <widget class="QTreeWidget" name="trvConnections">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>580</width>
+        <height>264</height>
+       </size>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::CustomContextMenu</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>false</bool>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::NoSelection</enum>
+      </property>
+      <property name="indentation">
+       <number>20</number>
+      </property>
+      <attribute name="headerMinimumSectionSize">
+       <number>26</number>
+      </attribute>
+      <attribute name="headerDefaultSectionSize">
+       <number>100</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string notr="true">1</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>586</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionConnect"/>
+    <addaction name="actionDisconnect"/>
+    <addaction name="separator"/>
+    <addaction name="actionNewVPN"/>
+    <addaction name="actionEditVPN"/>
+    <addaction name="actionDeleteVPN"/>
+    <addaction name="separator"/>
+    <addaction name="actionImportVPN"/>
+    <addaction name="actionExportVPN"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <widget class="QMenu" name="menuLanguage">
+     <property name="title">
+      <string>Language</string>
+     </property>
+     <addaction name="actionEnglish"/>
+     <addaction name="actionChinese"/>
+    </widget>
+    <addaction name="menuLanguage"/>
+    <addaction name="separator"/>
+    <addaction name="actionToolbar"/>
+    <addaction name="actionStatus"/>
+    <addaction name="separator"/>
+    <addaction name="actionCertificates"/>
+    <addaction name="actionResources"/>
+    <addaction name="separator"/>
+    <addaction name="actionLog"/>
+    <addaction name="separator"/>
+    <addaction name="actionOptions"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="actionCheckForUpdates"/>
+   </widget>
+   <widget class="QMenu" name="menuTool">
+    <property name="title">
+     <string>Tool</string>
+    </property>
+    <addaction name="actionChangePass"/>
+    <addaction name="actionChangePIN"/>
+    <addaction name="actionClearCredentials"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuView"/>
+   <addaction name="menuTool"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNewVPN"/>
+   <addaction name="actionDeleteVPN"/>
+   <addaction name="separator"/>
+   <addaction name="actionConnect"/>
+   <addaction name="actionDisconnect"/>
+   <addaction name="separator"/>
+   <addaction name="actionCertificates"/>
+   <addaction name="actionResources"/>
+   <addaction name="separator"/>
+   <addaction name="actionChangePIN"/>
+   <addaction name="actionOptions"/>
+  </widget>
+  <action name="actionLog">
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/view_vpnlog.png</normaloff>:/images/view_vpnlog.png</iconset>
+   </property>
+   <property name="text">
+    <string>Log...</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Log</string>
+   </property>
+  </action>
+  <action name="actionConnect">
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/connect_men.png</normaloff>:/images/connect_men.png</iconset>
+   </property>
+   <property name="text">
+    <string>Connect</string>
+   </property>
+   <property name="toolTip">
+    <string>Connect VPN</string>
+   </property>
+  </action>
+  <action name="actionNewVPN">
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/new_vpnconfig.png</normaloff>:/images/new_vpnconfig.png</iconset>
+   </property>
+   <property name="text">
+    <string>New...</string>
+   </property>
+   <property name="toolTip">
+    <string>New VPN config</string>
+   </property>
+  </action>
+  <action name="actionEditVPN">
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/edit_vpnconfig.png</normaloff>:/images/edit_vpnconfig.png</iconset>
+   </property>
+   <property name="text">
+    <string>Edit...</string>
+   </property>
+   <property name="toolTip">
+    <string>Edit VPN config</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/system_exit.png</normaloff>:/images/system_exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="toolTip">
+    <string>Exit Application</string>
+   </property>
+  </action>
+  <action name="actionCertificates">
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/small_certificate.png</normaloff>:/images/small_certificate.png</iconset>
+   </property>
+   <property name="text">
+    <string>Certificate...</string>
+   </property>
+   <property name="toolTip">
+    <string>Manage Certificate</string>
+   </property>
+  </action>
+  <action name="actionToolbar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Toolbar</string>
+   </property>
+  </action>
+  <action name="actionStatus">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Status bar</string>
+   </property>
+  </action>
+  <action name="actionOptions">
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/options.png</normaloff>:/images/options.png</iconset>
+   </property>
+   <property name="text">
+    <string>Options...</string>
+   </property>
+   <property name="toolTip">
+    <string>Edit Options</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/info.png</normaloff>:/images/info.png</iconset>
+   </property>
+   <property name="text">
+    <string>About...</string>
+   </property>
+  </action>
+  <action name="actionDeleteVPN">
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/delete_vpnconfig.png</normaloff>:/images/delete_vpnconfig.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+   <property name="toolTip">
+    <string>Delete VPN config</string>
+   </property>
+  </action>
+  <action name="actionChangePIN">
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/change_pin.png</normaloff>:/images/change_pin.png</iconset>
+   </property>
+   <property name="text">
+    <string>Change PIN...</string>
+   </property>
+   <property name="toolTip">
+    <string>Change PIN</string>
+   </property>
+  </action>
+  <action name="actionChangePass">
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/change_password.png</normaloff>:/images/change_password.png</iconset>
+   </property>
+   <property name="text">
+    <string>Change Password...</string>
+   </property>
+   <property name="toolTip">
+    <string>Change Password</string>
+   </property>
+  </action>
+  <action name="actionClearCredentials">
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/remove_credential.png</normaloff>:/images/remove_credential.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clear Credentials</string>
+   </property>
+   <property name="toolTip">
+    <string>Clear Credentials</string>
+   </property>
+  </action>
+  <action name="actionPreferences">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/vpn_client.png</normaloff>:/images/vpn_client.png</iconset>
+   </property>
+   <property name="text">
+    <string>Preferences...</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Preferences</string>
+   </property>
+  </action>
+  <action name="actionResources">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/show_resource.png</normaloff>:/images/show_resource.png</iconset>
+   </property>
+   <property name="text">
+    <string>Resources...</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Resources</string>
+   </property>
+  </action>
+  <action name="actionDisconnect">
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/disconnetd_men.png</normaloff>:/images/disconnetd_men.png</iconset>
+   </property>
+   <property name="text">
+    <string>Disconnect</string>
+   </property>
+   <property name="toolTip">
+    <string>Disconnect VPN</string>
+   </property>
+  </action>
+  <action name="actionEnglish">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/flag_en.png</normaloff>:/images/flag_en.png</iconset>
+   </property>
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+  <action name="actionChinese">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/flag_zh_CN.png</normaloff>:/images/flag_zh_CN.png</iconset>
+   </property>
+   <property name="text">
+    <string>Chinese</string>
+   </property>
+  </action>
+  <action name="actionCheckForUpdates">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/update_available.png</normaloff>:/images/update_available.png</iconset>
+   </property>
+   <property name="text">
+    <string>Check for Updates...</string>
+   </property>
+  </action>
+  <action name="actionVPNTunnelDetail">
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/vpn_tunnel_detail.png</normaloff>:/images/vpn_tunnel_detail.png</iconset>
+   </property>
+   <property name="text">
+    <string>VPN tunnel detail...</string>
+   </property>
+   <property name="toolTip">
+    <string>VPN tunnel detail</string>
+   </property>
+  </action>
+  <action name="actionImportVPN">
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/import_vpnconfig.png</normaloff>:/images/import_vpnconfig.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import...</string>
+   </property>
+   <property name="toolTip">
+    <string>Import VPN config</string>
+   </property>
+  </action>
+  <action name="actionExportVPN">
+   <property name="icon">
+    <iconset resource="vpn_client.qrc">
+     <normaloff>:/images/export_vpnconfig.png</normaloff>:/images/export_vpnconfig.png</iconset>
+   </property>
+   <property name="text">
+    <string>Export...</string>
+   </property>
+   <property name="toolTip">
+    <string>Export VPN Config</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="vpn_client.qrc"/>
+ </resources>
+ <connections/>
+</ui>

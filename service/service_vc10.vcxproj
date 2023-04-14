@@ -1,0 +1,691 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0D7F3CBC-19E3-3915-879F-9871038760A6}</ProjectGuid>
+    <RootNamespace>service</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <ProjectName>service</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolSet>v100</PlatformToolSet>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>service</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolSet>v100</PlatformToolSet>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>service</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+    <Import Project="..\openvpn.win32.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+    <Import Project="..\openvpn.win32.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vpn_service</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vpn_service</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;src;$(ZLIB_HOME);$(QUAZIP_HOME);$(QTDIR)\include;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtCore;debug;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CONSOLE;_DEBUG;_UNICODE;UNICODE;WIN32;QUAZIP_STATIC;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <AdditionalOptions>-w34100 -w34189 -w44996 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glu32.lib;opengl32.lib;gdi32.lib;user32.lib;crypt32.lib;ws2_32.lib;Iphlpapi.lib;psapi.lib;Version.lib;$(ZLIB_HOME)/zlib.lib;$(QUAZIP_HOME)/quazip1-qt5d.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Networkd.lib;$(QTDIR)\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(VPN_CLIENT)\debug\vpn_service.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreSpecificDefaultLibraries>msvcrt.lib;libcmt.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;WIN32;_USING_V110_SDK71_;QUAZIP_STATIC;_USING_V110_SDK71_;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;src;$(ZLIB_HOME);$(QUAZIP_HOME);$(QTDIR)\include;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtCore;release;$(QTDIR)\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-w34100 -w34189 -w44996 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CONSOLE;_UNICODE;UNICODE;WIN32;QUAZIP_STATIC;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glu32.lib;opengl32.lib;gdi32.lib;user32.lib;crypt32.lib;ws2_32.lib;Iphlpapi.lib;psapi.lib;Version.lib;$(ZLIB_HOME)/zlib.lib;$(QUAZIP_HOME)/quazip1-qt5.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5Network.lib;$(QTDIR)\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(VPN_CLIENT)\setup\vpn_service.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;WIN32;_USING_V110_SDK71_;QUAZIP_STATIC;_USING_V110_SDK71_;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\common\accessible_resource.cpp" />
+    <ClCompile Include="..\common\dialog_util.cpp" />
+    <ClCompile Include="..\common\file_util.cpp" />
+    <ClCompile Include="..\common\generic_result.cpp" />
+    <ClCompile Include="..\common\vpn_edge.cpp" />
+    <ClCompile Include="..\common\asn1_int.cpp" />
+    <ClCompile Include="..\common\cipher.cpp" />
+    <ClCompile Include="..\common\common.cpp" />
+    <ClCompile Include="..\common\connection.cpp" />
+    <ClCompile Include="..\common\context.cpp" />
+    <ClCompile Include="..\common\credentials.cpp" />
+    <ClCompile Include="..\common\encrypt_device_manager.cpp" />
+    <ClCompile Include="..\policy\cluster_policy.cpp" />
+    <ClCompile Include="..\common\locator.cpp" />
+    <ClCompile Include="..\policy\password_policy.cpp" />
+    <ClCompile Include="..\policy\resource_policy.cpp" />
+    <ClCompile Include="..\policy\update_policy.cpp" />
+    <ClCompile Include="Debug\moc_connection.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_encrypt_device_manager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_miscellaneous_service_i_proxy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_policy_engine_i_proxy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_policy_engine_servant.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_process_util.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_proxy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_server_endpoint_selector.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_service.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_tapdriver_manager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_tapdriver_manager_i_proxy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_vpn_agent_servant.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_vpn_config_manager_i_proxy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_vpn_config_manager_servant.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_vpn_i_proxy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="..\common\message_box_util.cpp" />
+    <ClCompile Include="..\common\miscellaneous_service_i_proxy.cpp" />
+    <ClCompile Include="..\common\miscellaneous_service_i_skeleton.cpp" />
+    <ClCompile Include="miscellaneous_service_servant.cpp" />
+    <ClCompile Include="..\common\passphrase_generator.cpp" />
+    <ClCompile Include="..\common\pkcs12_util.cpp" />
+    <ClCompile Include="..\policy\policy.cpp" />
+    <ClCompile Include="..\policy\policy_engine_i.cpp" />
+    <ClCompile Include="..\policy\policy_engine_i_proxy.cpp" />
+    <ClCompile Include="..\policy\policy_engine_i_skeleton.cpp" />
+    <ClCompile Include="..\policy\policy_engine_servant.cpp" />
+    <ClCompile Include="..\common\process_util.cpp" />
+    <ClCompile Include="Release\moc_connection.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_encrypt_device_manager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_miscellaneous_service_i_proxy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_policy_engine_i_proxy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_policy_engine_servant.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_process_util.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_proxy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_server_endpoint_selector.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_service.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_tapdriver_manager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_tapdriver_manager_i_proxy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_vpn_agent_servant.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_vpn_config_manager_i_proxy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_vpn_config_manager_servant.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_vpn_i_proxy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\qtservice.cpp" />
+    <ClCompile Include="src\qtservice_win.cpp" />
+    <ClCompile Include="..\common\request_dispatcher.cpp" />
+    <ClCompile Include="..\common\server_endpoint.cpp" />
+    <ClCompile Include="..\common\server_endpoint_selector.cpp" />
+    <ClCompile Include="service.cpp" />
+    <ClCompile Include="..\common\system_info.cpp" />
+    <ClCompile Include="..\common\tapdriver_manager.cpp" />
+    <ClCompile Include="..\common\tapdriver_manager_i_proxy.cpp" />
+    <ClCompile Include="..\common\tapdriver_manager_i_skeleton.cpp" />
+    <ClCompile Include="tapdriver_manager_servant.cpp" />
+    <ClCompile Include="..\policy\terminal_bind_policy.cpp" />
+    <ClCompile Include="..\common\ticket.cpp" />
+    <ClCompile Include="..\common\tls_auth.cpp" />
+    <ClCompile Include="..\common\translate.cpp" />
+    <ClCompile Include="vpn_agent_servant.cpp" />
+    <ClCompile Include="..\common\vpn_config.cpp" />
+    <ClCompile Include="..\common\vpn_config_manager_i_proxy.cpp" />
+    <ClCompile Include="..\common\vpn_config_manager_i_skeleton.cpp" />
+    <ClCompile Include="vpn_config_manager_servant.cpp" />
+    <ClCompile Include="..\common\vpn_i.cpp" />
+    <ClCompile Include="..\common\vpn_i_proxy.cpp" />
+    <ClCompile Include="..\common\vpn_i_skeleton.cpp" />
+    <ClCompile Include="vpn_log_parser.cpp" />
+    <ClCompile Include="..\common\vpn_statistics.cpp" />
+    <ClCompile Include="..\common\x509_certificate_info.cpp" />
+    <ClCompile Include="..\common\x509_certificate_util.cpp" />
+    <ClCompile Include="..\common\x509_name.cpp" />
+    <ClCompile Include="..\common\x509v3_ext.cpp" />
+    <ClCompile Include="..\common\zip_util.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\common\accessible_resource.h" />
+    <ClInclude Include="..\common\dialog_util.h" />
+    <ClInclude Include="..\common\file_util.h" />
+    <ClInclude Include="..\common\generic_result.h" />
+    <ClInclude Include="..\common\vpn_edge.h" />
+    <ClInclude Include="..\config\config.h" />
+    <ClInclude Include="..\config\version.h" />
+    <ClInclude Include="..\common\asn1_int.h" />
+    <ClInclude Include="..\common\cipher.h" />
+    <ClInclude Include="..\common\common.h" />
+    <CustomBuild Include="..\common\connection.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_DEBUG -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing connection.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2010" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing connection.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="..\common\context.h" />
+    <ClInclude Include="..\common\credentials.h" />
+    <CustomBuild Include="..\common\encrypt_device_manager.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_DEBUG -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing encrypt_device_manager.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2010" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing encrypt_device_manager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="..\policy\cluster_policy.h" />
+    <ClInclude Include="..\common\locator.h" />
+    <ClInclude Include="..\common\message_box_util.h" />
+    <ClInclude Include="..\common\miscellaneous_service_i.h" />
+    <CustomBuild Include="..\common\miscellaneous_service_i_proxy.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_DEBUG -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing miscellaneous_service_i_proxy.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2010" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing miscellaneous_service_i_proxy.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="..\common\miscellaneous_service_i_skeleton.h" />
+    <ClInclude Include="..\policy\password_policy.h" />
+    <ClInclude Include="..\policy\resource_policy.h" />
+    <ClInclude Include="..\policy\update_policy.h" />
+    <ClInclude Include="miscellaneous_service_servant.h" />
+    <ClInclude Include="..\common\passphrase_generator.h" />
+    <ClInclude Include="..\common\pkcs12_util.h" />
+    <ClInclude Include="..\policy\policy.h" />
+    <ClInclude Include="..\policy\policy_engine_i.h" />
+    <CustomBuild Include="..\policy\policy_engine_i_proxy.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_DEBUG -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing policy_engine_i_proxy.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2010" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing policy_engine_i_proxy.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="..\policy\policy_engine_i_skeleton.h" />
+    <CustomBuild Include="..\policy\policy_engine_servant.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_DEBUG -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing policy_engine_servant.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2010" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing policy_engine_servant.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="..\common\process_util.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_DEBUG -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing process_util.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2010" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing process_util.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="..\common\proxy.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_DEBUG -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing proxy.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2010" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing proxy.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="src\qtservice.h" />
+    <ClInclude Include="src\qtservice_p.h" />
+    <ClInclude Include="..\common\request_dispatcher.h" />
+    <ClInclude Include="..\common\server_endpoint.h" />
+    <CustomBuild Include="..\common\server_endpoint_selector.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_DEBUG -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing server_endpoint_selector.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2010" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing server_endpoint_selector.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="service.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_DEBUG -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing service.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2010" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing service.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="..\common\system_info.h" />
+    <CustomBuild Include="..\common\tapdriver_manager.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_DEBUG -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing tapdriver_manager.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2010" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing tapdriver_manager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="..\common\tapdriver_manager_i.h" />
+    <CustomBuild Include="..\common\tapdriver_manager_i_proxy.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_DEBUG -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing tapdriver_manager_i_proxy.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2010" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing tapdriver_manager_i_proxy.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="..\common\tapdriver_manager_i_skeleton.h" />
+    <ClInclude Include="tapdriver_manager_servant.h" />
+    <ClInclude Include="..\policy\terminal_bind_policy.h" />
+    <ClInclude Include="..\common\ticket.h" />
+    <ClInclude Include="..\common\tls_auth.h" />
+    <ClInclude Include="..\common\translate.h" />
+    <CustomBuild Include="vpn_agent_servant.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_DEBUG -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing vpn_agent_servant.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2010" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing vpn_agent_servant.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="..\common\vpn_config.h" />
+    <ClInclude Include="..\common\vpn_config_manager_i.h" />
+    <CustomBuild Include="..\common\vpn_config_manager_i_proxy.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_DEBUG -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing vpn_config_manager_i_proxy.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2010" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing vpn_config_manager_i_proxy.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="..\common\vpn_config_manager_i_skeleton.h" />
+    <CustomBuild Include="vpn_config_manager_servant.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_DEBUG -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing vpn_config_manager_servant.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2010" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing vpn_config_manager_servant.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="..\common\vpn_i.h" />
+    <CustomBuild Include="..\common\vpn_i_proxy.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_DEBUG -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing vpn_i_proxy.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_CONSOLE -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2010" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing vpn_i_proxy.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="..\common\vpn_i_skeleton.h" />
+    <ClInclude Include="vpn_log_parser.h" />
+    <ClInclude Include="..\common\vpn_statistics.h" />
+    <ClInclude Include="..\common\x509_certificate_info.h" />
+    <ClInclude Include="..\common\x509_certificate_util.h" />
+    <ClInclude Include="..\common\x509_name.h" />
+    <ClInclude Include="..\common\x509v3_ext.h" />
+    <ClInclude Include="..\common\zip_util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="debug\qrc_service.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\qrc_service.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <CustomBuild Include="debug\qtservice_win.moc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">src\qtservice_win.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+"$(QTDIR)\bin\moc.exe"  "src\qtservice_win.cpp" -o "$(ConfigurationName)\%(Filename).moc"  -D_CONSOLE -D_DEBUG -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src/qtservice_win.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\qtservice_win.moc;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="release\qtservice_win.moc">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">src\qtservice_win.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+"$(QTDIR)\bin\moc.exe"  "src\qtservice_win.cpp" -o "$(ConfigurationName)\%(Filename).moc"  -D_CONSOLE -D_UNICODE -DUNICODE -DWIN32 -DQUAZIP_STATIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DNDEBUG  "-I." "-I.\src" "-I$(ZLIB_HOME)\." "-I$(QUAZIP_HOME)\." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2010" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um" "-I$(SOURCEBASE)\." "-I$(SOURCEBASE)\include" "-I$(SOURCEBASE)\src\compat" "-I$(PTHREAD2_HOME)\." "-I$(LZO_HOME)\include" "-I$(TAP_WINDOWS_HOME)\include" "-I$(OPENSSL_HOME)\include" "-I$(OPENSSL_HOME)\ms"
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src/qtservice_win.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\qtservice_win.moc;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Debug\qtservice.moc" />
+    <None Include="service_zh_CN.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="qt_zh_CN.qm" />
+    <CustomBuild Include="service.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">service.qrc;qt_zh_CN.qm;service_zh_CN.qm;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\rcc.exe -name service service.qrc -o debug\qrc_service.cpp
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">RCC service.qrc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\qrc_service.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">service.qrc;qt_zh_CN.qm;service_zh_CN.qm;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\rcc.exe -name service service.qrc -o release\qrc_service.cpp
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">RCC service.qrc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\qrc_service.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="service_zh_CN.qm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="service.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Qt5Version_x0020_Win32="$(DefaultQtVersion)" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

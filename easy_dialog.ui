@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EasyDialog</class>
+ <widget class="QDialog" name="EasyDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>501</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="sizeConstraint">
+    <enum>QLayout::SetFixedSize</enum>
+   </property>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>5</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="lblBanner">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="vpn_client.qrc">:/images/vpn_banner.png</pixmap>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_10">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_7">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>5</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="verticalSpacing">
+      <number>11</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="lblGatway">
+       <property name="text">
+        <string>Gatway/Cluster</string>
+       </property>
+       <property name="buddy">
+        <cstring>comboGatway</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>13</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="2">
+      <widget class="QComboBox" name="comboGatway">
+       <property name="minimumSize">
+        <size>
+         <width>210</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <property name="insertPolicy">
+        <enum>QComboBox::NoInsert</enum>
+       </property>
+       <item>
+        <property name="text">
+         <string>192.168.31.29</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>172.16.21.112</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="lblUsername">
+       <property name="text">
+        <string>Username</string>
+       </property>
+       <property name="buddy">
+        <cstring>txtUsername</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>13</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLineEdit" name="txtUsername">
+       <property name="maxLength">
+        <number>60</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="lblPassword">
+       <property name="text">
+        <string>Password</string>
+       </property>
+       <property name="buddy">
+        <cstring>txtPassword</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>13</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLineEdit" name="txtPassword">
+       <property name="maxLength">
+        <number>30</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="lblPIN">
+       <property name="text">
+        <string>PIN</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <spacer name="horizontalSpacer_11">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>13</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="3" column="2">
+      <widget class="QLineEdit" name="txtPIN">
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="lblOtp">
+       <property name="text">
+        <string>One Time Password</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <spacer name="horizontalSpacer_7">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>13</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="4" column="2">
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLineEdit" name="txtOtp">
+         <property name="maxLength">
+          <number>30</number>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_8">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>5</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnGet">
+         <property name="text">
+          <string>Get</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="lblCert">
+       <property name="text">
+        <string>Client Certificate</string>
+       </property>
+       <property name="buddy">
+        <cstring>comboCert</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>13</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="5" column="2">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QComboBox" name="comboCert">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>5</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnRefresh">
+         <property name="text">
+          <string>Refresh</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="Line" name="line_2">
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_6">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>5</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="btnStandard">
+       <property name="text">
+        <string>Standard</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnConnect">
+       <property name="text">
+        <string>Connect</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_5">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>5</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>5</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QLabel" name="txtStatus">
+     <property name="text">
+      <string>Status</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_4">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>5</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>comboGatway</tabstop>
+  <tabstop>txtUsername</tabstop>
+  <tabstop>txtPassword</tabstop>
+  <tabstop>txtOtp</tabstop>
+  <tabstop>btnGet</tabstop>
+  <tabstop>comboCert</tabstop>
+  <tabstop>btnRefresh</tabstop>
+  <tabstop>btnStandard</tabstop>
+  <tabstop>btnConnect</tabstop>
+ </tabstops>
+ <resources>
+  <include location="vpn_client.qrc"/>
+ </resources>
+ <connections/>
+</ui>

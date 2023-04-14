@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{363af956-1738-4931-923b-d453ad397620}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{f51a01ec-9b4f-4af2-906d-82b97064a6e2}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\common\accessible_resource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\asn1_int.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\cipher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\connection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\context.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\credentials.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\encrypt_device_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\locator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\message_box_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\miscellaneous_service_i_proxy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\miscellaneous_service_i_skeleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="miscellaneous_service_servant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\passphrase_generator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\pkcs12_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\policy\policy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\policy\policy_engine_i.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\policy\policy_engine_i_proxy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\policy\policy_engine_i_skeleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\policy\policy_engine_servant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\process_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\qtservice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\qtservice_win.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\request_dispatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\server_endpoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\server_endpoint_selector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="service.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\system_info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\tapdriver_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\tapdriver_manager_i_proxy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\tapdriver_manager_i_skeleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tapdriver_manager_servant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\policy\terminal_bind_policy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\ticket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\tls_auth.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\translate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vpn_agent_servant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\vpn_config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\vpn_config_manager_i_proxy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\vpn_config_manager_i_skeleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vpn_config_manager_servant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\vpn_i.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\vpn_i_proxy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\vpn_i_skeleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vpn_log_parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\vpn_statistics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\x509_certificate_info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\x509_certificate_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\x509_name.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\x509v3_ext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\zip_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_connection.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_connection.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_encrypt_device_manager.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_encrypt_device_manager.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_miscellaneous_service_i_proxy.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_miscellaneous_service_i_proxy.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_policy_engine_i_proxy.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_policy_engine_i_proxy.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_policy_engine_servant.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_policy_engine_servant.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_process_util.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_process_util.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_proxy.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_proxy.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_server_endpoint_selector.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_server_endpoint_selector.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_service.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_service.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_tapdriver_manager.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_tapdriver_manager.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_tapdriver_manager_i_proxy.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_tapdriver_manager_i_proxy.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_vpn_agent_servant.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_vpn_agent_servant.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_vpn_config_manager_i_proxy.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_vpn_config_manager_i_proxy.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_vpn_config_manager_servant.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_vpn_config_manager_servant.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_vpn_i_proxy.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_vpn_i_proxy.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\qrc_service.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="release\qrc_service.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\file_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\policy\cluster_policy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\policy\password_policy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\policy\resource_policy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\policy\update_policy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\vpn_edge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\dialog_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\generic_result.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\common\accessible_resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\asn1_int.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\cipher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="..\common\connection.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="..\common\context.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\credentials.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="..\common\encrypt_device_manager.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="..\common\locator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\message_box_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\miscellaneous_service_i.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="..\common\miscellaneous_service_i_proxy.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="..\common\miscellaneous_service_i_skeleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="miscellaneous_service_servant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\passphrase_generator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\pkcs12_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\policy\policy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\policy\policy_engine_i.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="..\policy\policy_engine_i_proxy.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="..\policy\policy_engine_i_skeleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="..\policy\policy_engine_servant.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\common\process_util.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\common\proxy.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="src\qtservice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\qtservice_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\request_dispatcher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\server_endpoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="..\common\server_endpoint_selector.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="service.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="..\common\system_info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="..\common\tapdriver_manager.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="..\common\tapdriver_manager_i.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="..\common\tapdriver_manager_i_proxy.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="..\common\tapdriver_manager_i_skeleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tapdriver_manager_servant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\policy\terminal_bind_policy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\ticket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\tls_auth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\translate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="vpn_agent_servant.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="..\common\vpn_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\vpn_config_manager_i.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="..\common\vpn_config_manager_i_proxy.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="..\common\vpn_config_manager_i_skeleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="vpn_config_manager_servant.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="..\common\vpn_i.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="..\common\vpn_i_proxy.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="..\common\vpn_i_skeleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vpn_log_parser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\vpn_statistics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\x509_certificate_info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\x509_certificate_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\x509_name.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\x509v3_ext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\zip_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\file_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\config\version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\policy\cluster_policy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\policy\password_policy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\policy\resource_policy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\policy\update_policy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\vpn_edge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\config\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\dialog_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\generic_result.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="service_zh_CN.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="qt_zh_CN.qm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <CustomBuild Include="service.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <None Include="service_zh_CN.qm">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="service.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Debug\qtservice.moc">
+      <Filter>Generated Files\Debug</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Debug\qtservice_win.moc">
+      <Filter>Generated Files\Debug</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Release\qtservice_win.moc">
+      <Filter>Generated Files\Release</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
