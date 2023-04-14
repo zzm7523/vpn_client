@@ -1,0 +1,1 @@
+基于QT的OpenVPN图形客户端，支持Windows和Linux平台
